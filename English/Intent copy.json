@@ -1,0 +1,791 @@
+{
+      "intents": [
+          {
+              "tag": "BorderSecurityGreeting",
+              "patterns": [
+                  "Hello",
+                  "Hi",
+                  "Good morning",
+                  "Greetings"
+              ],
+              "responses": [
+                  "Welcome to the border security checkpoint. How can I assist you?",
+                  "Hello! How may I help you today?",
+                  "Hi there! What brings you to our checkpoint?"
+              ],
+              "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+              },
+              "context": {
+                  "in": "",
+                  "out": "BorderSecurityGreetingUserRequest",
+                  "clear": false
+              },
+              "entityType": "NA",
+              "entities": []
+          },
+          {
+              "tag": "BorderSecurityDocuments",
+              "patterns": [
+                  "Here are my documents",
+                  "Passport and visa",
+                  "Identification"
+              ],
+              "responses": [
+                  "Thank you for providing your documents. Let me check them.",
+                  "Sure, please hand over your documents for inspection.",
+                  "Great! I'll verify your documents right away."
+              ],
+              "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+              },
+              "context": {
+                  "in": "",
+                  "out": "BorderSecurityDocumentPresentation",
+                  "clear": false
+              },
+              "entityType": "NA",
+              "entities": []
+          },
+          {
+              "tag": "BorderSecurityQuestion",
+              "patterns": [
+                  "Is there anything I should know?",
+                  "What's the process?",
+                  "Any restrictions?"
+              ],
+              "responses": [
+                  "We have security procedures in place for your safety. Please follow instructions from our officers.",
+                  "Our priority is your safety. Feel free to ask questions or seek assistance during the process.",
+                  "To ensure security, please cooperate with our officers and follow the guidelines."
+              ],
+              "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+              },
+              "context": {
+                  "in": "",
+                  "out": "BorderSecurityQuestionInquiry",
+                  "clear": false
+              },
+              "entityType": "NA",
+              "entities": []
+          },
+          {
+              "tag": "BorderSecurityProhibitedItems",
+              "patterns": [
+                  "What items are prohibited?",
+                  "Can I carry a pocket knife?",
+                  "Are electronic cigarettes allowed?"
+              ],
+              "responses": [
+                  "Prohibited items include sharp objects, explosives, and firearms. Pocket knives and electronic cigarettes are generally not allowed in your carry-on luggage.",
+                  "For safety, prohibited items include sharp objects, explosives, and firearms. Please refrain from carrying pocket knives and electronic cigarettes in your carry-on luggage.",
+                  "To maintain security, we restrict sharp objects, explosives, and firearms. Pocket knives and electronic cigarettes should not be in your carry-on luggage."
+              ],
+              "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+              },
+              "context": {
+                  "in": "",
+                  "out": "BorderSecurityProhibitedItemsInquiry",
+                  "clear": false
+              },
+              "entityType": "NA",
+              "entities": []
+          },
+          {
+              "tag": "BorderSecurityConflict",
+              "patterns": [
+                  "This is too strict",
+                  "I don't understand why I can't bring this",
+                  "I need to speak to a supervisor",
+                  "This is ridiculous",
+                  "You people are making this difficult"
+              ],
+              "responses": [
+                  "I understand your concern. Airport security measures are in place to ensure everyone's safety. If you have questions or need further assistance, a supervisor will be available to help you.",
+                  "Safety is our top priority. We appreciate your understanding. A supervisor can address any concerns you may have.",
+                  "We apologize for any inconvenience. Our procedures are designed to maintain safety. Please don't hesitate to speak with a supervisor if you have specific concerns."
+              ],
+              "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+              },
+              "context": {
+                  "in": "",
+                  "out": "BorderSecurityConflictResolution",
+                  "clear": false
+              },
+              "entityType": "NA",
+              "entities": []
+          },
+          {
+              "tag": "AirportSecurityGreeting",
+              "patterns": [
+                  "Hello",
+                  "Hi",
+                  "Good morning",
+                  "Greetings"
+              ],
+              "responses": [
+                  "Welcome to the airport security checkpoint. How can I assist you?",
+                  "Hello! How may I help you today?",
+                  "Hi there! What brings you to our checkpoint?"
+              ],
+              "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+              },
+              "context": {
+                  "in": "",
+                  "out": "AirportSecurityGreetingUserRequest",
+                  "clear": false
+              },
+              "entityType": "NA",
+              "entities": []
+          },
+          {
+              "tag": "AirportSecurityScreening",
+              "patterns": [
+                  "Do I need to remove my shoes?",
+                  "Can I keep my laptop in the bag?",
+                  "What's the procedure for liquids?"
+              ],
+              "responses": [
+                  "Airport security regulations require you to remove your shoes, take out your laptop from its bag, and place liquids in a clear, quart-sized bag.",
+                  "For security reasons, please remove your shoes, take out your laptop, and place liquids in a clear, quart-sized bag.",
+                  "To ensure safety, we ask passengers to remove their shoes, take out laptops, and put liquids in a clear, quart-sized bag."
+              ],
+              "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+              },
+              "context": {
+                  "in": "",
+                  "out": "AirportSecurityScreeningInquiry",
+                  "clear": false
+              },
+              "entityType": "NA",
+              "entities": []
+          },
+          {
+              "tag": "AirportSecurityProhibitedItems",
+              "patterns": [
+                  "What items are prohibited?",
+                  "Can I carry a pocket knife?",
+                  "Are electronic cigarettes allowed?"
+              ],
+              "responses": [
+                  "Prohibited items include sharp objects, explosives, and firearms. Pocket knives and electronic cigarettes are generally not allowed in your carry-on luggage.",
+                  "For safety, prohibited items include sharp objects, explosives, and firearms. Please refrain from carrying pocket knives and electronic cigarettes in your carry-on luggage.",
+                  "To maintain security, we restrict sharp objects, explosives, and firearms. Pocket knives and electronic cigarettes should not be in your carry-on luggage."
+              ],
+              "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+              },
+              "context": {
+                  "in": "",
+                  "out": "AirportSecurityProhibitedItemsInquiry",
+                  "clear": false
+              },
+              "entityType": "NA",
+              "entities": []
+            },
+            {
+                  "tag": "BorderSecurityNonCompliance",
+                  "patterns": [
+                        "I won't remove my shoes",
+                        "I refuse to open my bag",
+                        "I won't follow these rules",
+                        "I'm not doing this",
+                        "I demand to be treated differently"
+                  ],
+                  "responses": [
+                        "I'm sorry, but for security reasons, we require all passengers to follow these procedures. Refusing to comply may result in delays and additional security checks.",
+                        "Security procedures are in place for everyone's safety. Non-compliance may lead to further inspections and delays.",
+                        "To ensure the safety of all passengers, we kindly request that you follow security procedures. Non-compliance can lead to additional checks and delays."
+                  ],
+                  "extension": {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context": {
+                        "in": "",
+                        "out": "BorderSecurityNonComplianceResolution",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityConflict",
+                  "patterns": [
+                        "This is too strict",
+                        "I don't understand why I can't bring this",
+                        "I need to speak to a supervisor",
+                        "This is ridiculous",
+                        "You people are making this difficult"
+                  ],
+                  "responses": [
+                        "I understand your concern. Airport security measures are in place to ensure everyone's safety. If you have questions or need further assistance, a supervisor will be available to help you.",
+                        "Safety is our top priority. We appreciate your understanding. A supervisor can address any concerns you may have.",
+                        "We apologize for any inconvenience. Our procedures are designed to maintain safety. Please don't hesitate to speak with a supervisor if you have specific concerns."
+                  ],
+                  "extension": {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context": {
+                        "in": "",
+                        "out": "AirportSecurityConflictResolution",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityNonCompliance",
+                  "patterns": [
+                        "I won't remove my shoes",
+                        "I refuse to open my bag",
+                        "I won't follow these rules",
+                        "I'm not doing this",
+                        "I demand to be treated differently"
+                  ],
+                  "responses": [
+                        "I'm sorry, but for security reasons, we require all passengers to follow these procedures. Refusing to comply may result in delays and additional security checks.",
+                        "Security procedures are in place for everyone's safety. Non-compliance may lead to further inspections and delays.",
+                        "To ensure the safety of all passengers, we kindly request that you follow security procedures. Non-compliance can lead to additional checks and delays."
+                  ],
+                  "extension": {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context": {
+                        "in": "",
+                        "out": "AirportSecurityNonComplianceResolution",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "BorderSecurityRandomCheck",
+                  "patterns": [
+                        "Why was I selected for a random check?",
+                        "Is this a random security check?",
+                        "I've been randomly selected, why?"
+                  ],
+                  "responses": [
+                        "Random security checks are a standard procedure to enhance safety. Your cooperation is appreciated as we perform this quick verification.",
+                        "Random checks are part of our security protocol to ensure fairness and safety. Thank you for your patience and understanding.",
+                        "Occasionally, passengers are randomly selected for additional checks. This is a routine measure to maintain security. Thank you for your understanding."
+                  ],
+                  "extension": {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context": {
+                        "in": "",
+                        "out": "BorderSecurityRandomCheckInquiry",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityRandomCheck",
+                  "patterns": [
+                        "Why was I selected for a random check?",
+                        "Is this a random security check?",
+                        "I've been randomly selected, why?"
+                  ],
+                  "responses": [
+                        "Random security checks are a standard procedure to enhance safety. Your cooperation is appreciated as we perform this quick verification.",
+                        "Random checks are part of our security protocol to ensure fairness and safety. Thank you for your patience and understanding.",
+                        "Occasionally, passengers are randomly selected for additional checks. This is a routine measure to maintain security. Thank you for your understanding."
+                  ],
+                  "extension": {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "context": {
+                        "in": "",
+                        "out": "AirportSecurityRandomCheckInquiry",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "BorderSecurityLuggageCheck",
+                  "patterns": [
+                  "I have fragile items in my luggage",
+                  "Please be gentle with my bag",
+                  "Fragile belongings inside"
+                  ],
+                  "responses": [
+                  "Noted! We'll handle your luggage with care. Please proceed to the security check.",
+                  "Thank you for letting us know. We'll take special care of your bag during the security check.",
+                  "We appreciate the information. Your belongings will be handled with caution during inspection."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "BorderSecurityLuggageCheckAcknowledgment",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityLostItem",
+                  "patterns": [
+                  "I lost my wallet",
+                  "I can't find my phone",
+                  "I misplaced my passport"
+                  ],
+                  "responses": [
+                  "I'm sorry to hear that. Please report the lost item to our lost and found desk after security screening.",
+                  "It happens to the best of us. We have a lost and found desk after security. Please report your lost item there.",
+                  "I understand it can be stressful. After security, please visit our lost and found desk to report the missing item."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "AirportSecurityLostItemAcknowledgment",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "BorderSecurityProhibitedItemFound",
+                  "patterns": [
+                  "We found a prohibited item",
+                  "Prohibited item detected",
+                  "I've discovered a restricted item"
+                  ],
+                  "responses": [
+                  "Thank you for notifying us. Please hand over the item to security personnel for further inspection and disposal.",
+                  "Your cooperation is appreciated. Please give the detected item to security personnel for proper handling.",
+                  "Safety is our priority. Please surrender the found item to security staff for necessary actions."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "BorderSecurityProhibitedItemFoundAcknowledgment",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityProhibitedItemFound",
+                  "patterns": [
+                  "We found a prohibited item",
+                  "Prohibited item detected",
+                  "I've discovered a restricted item"
+                  ],
+                  "responses": [
+                  "Thank you for notifying us. Please hand over the item to security personnel for further inspection and disposal.",
+                  "Your cooperation is appreciated. Please give the detected item to security personnel for proper handling.",
+                  "Safety is our priority. Please surrender the found item to security staff for necessary actions."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "AirportSecurityProhibitedItemFoundAcknowledgment",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "BorderSecurityThankYou",
+                  "patterns": [
+                  "Thank you",
+                  "Appreciate your help",
+                  "Grateful"
+                  ],
+                  "responses": [
+                  "You're welcome! If you have any more questions or need assistance, feel free to ask.",
+                  "Glad I could assist! Have a safe journey, and don't hesitate to ask if you need help later.",
+                  "It's my pleasure to help. Have a great day, and travel safely!"
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "BorderSecurityThankYouAcknowledgment",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityThankYou",
+                  "patterns": [
+                  "Thank you",
+                  "Appreciate your help",
+                  "Grateful"
+                  ],
+                  "responses": [
+                  "You're welcome! If you have any more questions or need assistance, feel free to ask.",
+                  "Glad I could assist! Have a safe journey, and don't hesitate to ask if you need help later.",
+                  "It's my pleasure to help. Have a great day, and travel safely!"
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "AirportSecurityThankYouAcknowledgment",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "BorderSecuritySpecialAssistance",
+                  "patterns": [
+                  "I need special assistance",
+                  "Assistance required",
+                  "I have a disability"
+                  ],
+                  "responses": [
+                  "Of course, we're here to assist you. Please let our staff know your specific needs, and we'll make the necessary arrangements.",
+                  "Your comfort and safety are important to us. Kindly inform us of any special requirements, and we'll provide the assistance you need.",
+                  "We're here to help. If you have any special needs or require assistance, please don't hesitate to inform our staff."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "BorderSecuritySpecialAssistanceAcknowledgment",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecuritySpecialAssistance",
+                  "patterns": [
+                  "I need special assistance",
+                  "Assistance required",
+                  "I have a disability"
+                  ],
+                  "responses": [
+                  "Of course, we're here to assist you. Please let our staff know your specific needs, and we'll make the necessary arrangements.",
+                  "Your comfort and safety are important to us. Kindly inform us of any special requirements, and we'll provide the assistance you need.",
+                  "We're here to help. If you have any special needs or require assistance, please don't hesitate to inform our staff."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "AirportSecuritySpecialAssistanceAcknowledgment",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "BorderSecurityPreCheck",
+                  "patterns": [
+                  "I have TSA PreCheck",
+                  "I'm a frequent flyer",
+                  "Do I qualify for expedited screening?"
+                  ],
+                  "responses": [
+                  "If you have TSA PreCheck, you may be eligible for expedited screening. Please follow the signs for PreCheck lanes.",
+                  "TSA PreCheck passengers can enjoy expedited screening. Look for the dedicated PreCheck lanes for faster processing.",
+                  "Great news! TSA PreCheck passengers can use the expedited screening lanes for a quicker security check."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "BorderSecurityPreCheckInquiry",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityPreCheck",
+                  "patterns": [
+                  "I have TSA PreCheck",
+                  "I'm a frequent flyer",
+                  "Do I qualify for expedited screening?"
+                  ],
+                  "responses": [
+                  "If you have TSA PreCheck, you may be eligible for expedited screening. Please follow the signs for PreCheck lanes.",
+                  "TSA PreCheck passengers can enjoy expedited screening. Look for the dedicated PreCheck lanes for faster processing.",
+                  "Great news! TSA PreCheck passengers can use the expedited screening lanes for a quicker security check."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "AirportSecurityPreCheckInquiry",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "BorderSecurityLostItem",
+                  "patterns": [
+                  "I lost my luggage",
+                  "My bag is missing",
+                  "Where's my suitcase?"
+                  ],
+                  "responses": [
+                  "I'm sorry to hear that. Please report the lost luggage to our lost and found desk after security screening.",
+                  "It happens occasionally. Please report your lost luggage at our lost and found desk after security.",
+                  "I understand it can be concerning. After security, please visit our lost and found desk to report the missing luggage."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "BorderSecurityLostItemAcknowledgment",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityLostItem",
+                  "patterns": [
+                  "I lost my luggage",
+                  "My bag is missing",
+                  "Where's my suitcase?"
+                  ],
+                  "responses": [
+                  "I'm sorry to hear that. Please report the lost luggage to our lost and found desk after security screening.",
+                  "It happens occasionally. Please report your lost luggage at our lost and found desk after security.",
+                  "I understand it can be concerning. After security, please visit our lost and found desk to report the missing luggage."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "AirportSecurityLostItemAcknowledgment",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "BorderSecurityDirections",
+                  "patterns": [
+                  "How do I get to Gate A?",
+                  "Where is the baggage claim area?",
+                  "Can you show me the way to customs?"
+                  ],
+                  "responses": [
+                  "Sure, I can help with that. To get to Gate A, follow the signs. For baggage claim, go straight ahead, and customs is to your right.",
+                  "Of course! To reach Gate A, follow the signs. Baggage claim is straight ahead, and customs is to your right.",
+                  "Certainly, I can assist you. To find Gate A, follow the signs. Baggage claim is straight ahead, and customs is to your right."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "BorderSecurityDirectionsInquiry",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityDirections",
+                  "patterns": [
+                  "How do I get to Terminal B?",
+                  "Where is the security checkpoint?",
+                  "Can you guide me to the departure gates?"
+                  ],
+                  "responses": [
+                  "Certainly, I can assist with that. To reach Terminal B, follow the signs. The security checkpoint is ahead, and departure gates are well-marked.",
+                  "Of course! To find Terminal B, follow the signs. The security checkpoint is up ahead, and departure gates are clearly labeled.",
+                  "Sure thing! To get to Terminal B, simply follow the signs. The security checkpoint is ahead, and you'll find the departure gates clearly indicated."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "AirportSecurityDirectionsInquiry",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "BorderSecurityEmergencyExit",
+                  "patterns": [
+                  "Where are the emergency exits?",
+                  "How do I find the nearest exit?",
+                  "In case of emergency, where should I go?"
+                  ],
+                  "responses": [
+                  "Safety first! Emergency exits are marked with illuminated signs. Follow the nearest exit signs for your safety.",
+                  "In case of emergency, look for illuminated exit signs. Follow them to reach the nearest emergency exit for your safety.",
+                  "Your safety is important. In an emergency, follow the illuminated exit signs to find the nearest emergency exit and proceed outside."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "BorderSecurityEmergencyExitInquiry",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityEmergencyExit",
+                  "patterns": [
+                  "Where are the emergency exits?",
+                  "How do I find the nearest exit?",
+                  "In case of emergency, where should I go?"
+                  ],
+                  "responses": [
+                  "Safety first! Emergency exits are marked with illuminated signs. Follow the nearest exit signs for your safety.",
+                  "In case of emergency, look for illuminated exit signs. Follow them to reach the nearest emergency exit for your safety.",
+                  "Your safety is important. In an emergency, follow the illuminated exit signs to find the nearest emergency exit and proceed outside."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "AirportSecurityEmergencyExitInquiry",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "BorderSecurityAssistanceCounter",
+                  "patterns": [
+                  "Where can I find the assistance counter?",
+                  "I need help, where should I go?",
+                  "Is there a service desk nearby?"
+                  ],
+                  "responses": [
+                  "Certainly! The assistance counter is located to your left. Our staff there will be happy to help you with any questions or concerns.",
+                  "You're in the right place! The assistance counter is on your left, and our team is ready to assist you with any inquiries.",
+                  "Of course, we have an assistance counter to your left. Our staff is available there to provide any assistance you may need."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "BorderSecurityAssistanceCounterInquiry",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "AirportSecurityAssistanceCounter",
+                  "patterns": [
+                  "Where can I find the assistance counter?",
+                  "I need help, where should I go?",
+                  "Is there a service desk nearby?"
+                  ],
+                  "responses": [
+                  "Certainly! The assistance counter is located to your left. Our staff there will be happy to help you with any questions or concerns.",
+                  "You're in the right place! The assistance counter is on your left, and our team is ready to assist you with any inquiries.",
+                  "Of course, we have an assistance counter to your left. Our staff is available there to provide any assistance you may need."
+                  ],
+                  "extension": {
+                  "function": "",
+                  "entities": false,
+                  "responses": []
+                  },
+                  "context": {
+                  "in": "",
+                  "out": "AirportSecurityAssistanceCounterInquiry",
+                  "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            }
+              
+      ]
+}
+  
