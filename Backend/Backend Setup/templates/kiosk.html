@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #2a2640;
+            font-family: Arial, sans-serif;
+        }
+        .page-header {
+            background: linear-gradient(to right, #734656, #a64e46);
+            width: 100%;
+            padding: 30px 0;
+            text-align: center;
+            color: #f29544;
+            font-size: 38px;
+            border-bottom: 5px solid #a64e46;
+            margin-bottom: 70px;
+        }
+        .kiosk {
+            width: 600px;
+            padding: 50px;
+            background-color: #1b1626;
+            border: 5px solid #734656;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .message-box {
+            width: 100%;
+            padding: 30px;
+            margin-bottom: 50px;
+            border: 5px solid #a64e46;
+            border-radius: 15px;
+            background-color: #f29544;
+            color: #2a2640;
+            font-size: 20px;
+            text-align: left;
+            position: relative;
+        }
+        .label {
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            background: linear-gradient(to right, #a64e46, #f29544);
+            color: #2a2640;
+            padding: 10px;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 0;
+            font-size: 18px;
+        }
+        .button {
+            background-color: #a64e46;
+            color: #f29544;
+            border: none;
+            padding: 12px 25px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 70px;
+        }
+    </style>
+    <script>
+        function clearAndRefresh() {
+            document.getElementById("User_Request").innerHTML = "";
+            document.getElementById("Chatbot_Response").innerHTML = "";
+            window.location.reload();
+        }
+    </script>
+</head>
+<body>
+    <div class="page-header">
+        <span style="font-family: 'Courier New', Courier, monospace; font-weight: bold;">Interactive Kiosk</span>
+    </div>
+    <div class="kiosk">
+        <div class="message-box">
+            <div class="label">User Request</div>
+            <div id="User_Request">{{User_Request}}</div>
+        </div>
+        <div class="message-box">
+            <div class="label">Chatbot Response</div>
+            <div id="Chatbot_Response">{{Chatbot_Response}}</div>
+        </div>
+        <button class="button" onclick="clearAndRefresh()">Press to Speak</button>
+    </div>
+</body>
+</html>
